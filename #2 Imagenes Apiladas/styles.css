@@ -1,0 +1,82 @@
+:root {
+    font-size: 16px;
+ --gradient: linear-gradient(to top, #020024 0%, #0a318a 35%, #00d4ff 100%);
+ --triangle: polygon(0 100%, 50% 0, 100% 100%);
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100%;
+    background-image: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-pokemon {
+    width: 8rem;
+    margin-bottom: 15px;
+}
+
+.container {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+p {
+    text-align: center;
+    
+}
+
+
+.pokemon-name {
+    font-size: 0.8rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    background-color: black;
+    border-radius: 1rem;
+    display: none;
+}
+
+.pokemon {
+    transition: 0.9s;
+    position: relative;
+    top: 0;
+}
+
+.pokemon:hover {
+    position: relative;
+    top: -10px;
+}
+
+.pokemon:hover .pokemon-name {
+    display: block;
+}
+
+.arrow {
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    margin: 0 auto;
+    clip-path: var(--triangle);
+    display: none;
+    position: absolute;
+    bottom: 25px;
+    left: 43%;
+}
+
+.pokemon:hover .arrow {
+    display: block;
+}
